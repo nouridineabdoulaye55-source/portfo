@@ -149,9 +149,7 @@
       flex-direction: column;
       gap: 0.2rem;
     }
-    .mobile-menu ul li {
-      overflow: hidden;
-    }
+    .mobile-menu ul li { overflow: hidden; }
     .mobile-menu ul li a {
       display: block;
       font-family: 'Playfair Display', serif;
@@ -165,10 +163,7 @@
       transform: translateY(40px);
       opacity: 0;
     }
-    .mobile-menu.open ul li a {
-      transform: translateY(0);
-      opacity: 1;
-    }
+    .mobile-menu.open ul li a { transform: translateY(0); opacity: 1; }
     .mobile-menu.open ul li:nth-child(1) a { transition: color 0.25s, transform 0.45s 0.05s ease, opacity 0.45s 0.05s ease; }
     .mobile-menu.open ul li:nth-child(2) a { transition: color 0.25s, transform 0.45s 0.12s ease, opacity 0.45s 0.12s ease; }
     .mobile-menu.open ul li:nth-child(3) a { transition: color 0.25s, transform 0.45s 0.19s ease, opacity 0.45s 0.19s ease; }
@@ -182,10 +177,7 @@
       transform: translateY(20px);
       transition: opacity 0.4s 0.45s, transform 0.4s 0.45s;
     }
-    .mobile-menu.open .mobile-menu-footer {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .mobile-menu.open .mobile-menu-footer { opacity: 1; transform: translateY(0); }
     .mobile-menu-footer a {
       font-family: 'Space Mono', monospace;
       font-size: 0.7rem;
@@ -198,11 +190,9 @@
     .mobile-menu-footer a:hover { color: var(--accent); }
     .mobile-menu-line {
       position: absolute;
-      width: 1px;
-      height: 80px;
+      width: 1px; height: 80px;
       background: linear-gradient(to bottom, var(--accent), transparent);
-      bottom: 3rem;
-      left: 50%;
+      bottom: 3rem; left: 50%;
       opacity: 0;
       transition: opacity 0.4s 0.5s;
     }
@@ -241,11 +231,7 @@
       opacity: 0;
       animation: fadeUp 0.8s 0.2s forwards;
     }
-    .hero-tag::before {
-      content: '';
-      width: 30px; height: 1px;
-      background: var(--accent);
-    }
+    .hero-tag::before { content: ''; width: 30px; height: 1px; background: var(--accent); }
     .hero-name {
       font-family: 'Playfair Display', serif;
       font-size: clamp(3rem, 7vw, 6.5rem);
@@ -301,6 +287,7 @@
     }
     .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
  
+    /* HERO IMAGE — desktop */
     .hero-image {
       position: absolute; right: 4rem; top: 50%;
       transform: translateY(-50%);
@@ -338,6 +325,21 @@
     .corner-bl { bottom: -8px; left: -8px; border-width: 0 0 2px 2px; }
     .corner-br { bottom: -8px; right: -8px; border-width: 0 2px 2px 0; }
  
+    /* HERO IMAGE — mobile (sous le texte) */
+    .hero-image-mobile {
+      display: none;
+      width: 100%;
+      max-width: 320px;
+      margin: 2.5rem auto 0;
+      position: relative;
+      opacity: 0;
+      animation: fadeUp 0.8s 1s forwards;
+    }
+    .hero-image-mobile .hero-image-frame {
+      width: 100%;
+      height: 300px;
+    }
+ 
     .hero-scroll {
       position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
       display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
@@ -357,7 +359,8 @@
  
     /* STATS */
     .stats {
-      display: flex; gap: 0; border-top: 1px solid var(--border);
+      display: flex; gap: 0;
+      border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       margin: 0 4rem;
     }
@@ -402,11 +405,7 @@
       text-transform: uppercase;
       margin-bottom: 1.5rem;
     }
-    .section-tag::after {
-      content: '';
-      flex: 1; max-width: 60px; height: 1px;
-      background: var(--accent);
-    }
+    .section-tag::after { content: ''; flex: 1; max-width: 60px; height: 1px; background: var(--accent); }
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2rem, 4vw, 3.5rem);
@@ -444,12 +443,7 @@
       opacity: 0.3;
       bottom: -20px; right: -20px;
     }
-    .about-text p {
-      color: var(--muted);
-      line-height: 1.9;
-      margin-bottom: 1.5rem;
-      font-size: 1.05rem;
-    }
+    .about-text p { color: var(--muted); line-height: 1.9; margin-bottom: 1.5rem; font-size: 1.05rem; }
     .about-text p strong { color: var(--text); }
     .about-highlights {
       display: grid;
@@ -503,12 +497,7 @@
       opacity: 0.6;
     }
     .service-icon { font-size: 2.5rem; margin-bottom: 1.5rem; display: block; }
-    .service-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
+    .service-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; }
     .service-desc { color: var(--muted); font-size: 0.95rem; line-height: 1.8; }
     .service-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
     .service-tag {
@@ -725,10 +714,24 @@
       nav { padding: 1.2rem 2rem; }
       .hero, section, footer { padding-left: 2rem; padding-right: 2rem; }
       .hero-image { display: none; }
+      .hero-image-mobile { display: block; }
       .about-grid, .contact-grid { grid-template-columns: 1fr; }
       .services-grid { grid-template-columns: 1fr 1fr; }
       .skills-grid { grid-template-columns: repeat(3, 1fr); }
       .stats { margin: 0 2rem; }
+      /* Hero mobile : contenu centré + image en dessous */
+      .hero {
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 7rem;
+        padding-bottom: 6rem;
+        text-align: center;
+        align-items: center;
+      }
+      .hero-content { max-width: 100%; }
+      .hero-tag { justify-content: center; }
+      .hero-cta { justify-content: center; }
+      .hero-desc { margin-left: auto; margin-right: auto; }
     }
     @media (max-width: 768px) {
       .nav-links { display: none; }
@@ -804,11 +807,23 @@
         <a href="#projects" class="btn-primary">Voir mes projets →</a>
         <a href="#contact" class="btn-secondary">Me contacter</a>
       </div>
+ 
+      <!-- IMAGE MOBILE (sous le texte, visible uniquement sur tablette/mobile) -->
+      <div class="hero-image-mobile">
+        <div class="hero-image-frame">
+          <img src="image/nb.jpg" alt="Abdoulaye Nouridine" />
+          <div class="hero-image-corner corner-tl"></div>
+          <div class="hero-image-corner corner-tr"></div>
+          <div class="hero-image-corner corner-bl"></div>
+          <div class="hero-image-corner corner-br"></div>
+        </div>
+      </div>
     </div>
  
+    <!-- IMAGE DESKTOP (position absolue, visible uniquement sur grand écran) -->
     <div class="hero-image">
       <div class="hero-image-frame">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Abdoulaye Nouridine" />
+        <img src="image/nb.jpg" alt="Abdoulaye Nouridine" />
         <div class="hero-image-corner corner-tl"></div>
         <div class="hero-image-corner corner-tr"></div>
         <div class="hero-image-corner corner-bl"></div>
@@ -836,7 +851,7 @@
     <div class="about-grid">
       <div class="about-image-wrap reveal">
         <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80" alt="Abdoulaye au travail" />
+          <img src="image/nour.png" alt="Abdoulaye au travail" />
         </div>
         <div class="about-deco"></div>
       </div>
@@ -1045,8 +1060,6 @@
       document.body.style.overflow = '';
     }
     hamburger.addEventListener('click', () => menuOpen ? closeMenu() : openMenu());
- 
-    // Close on Escape key
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuOpen) closeMenu(); });
  
     // ── NAVBAR SCROLL ────────────────────────────────────────
@@ -1097,6 +1110,9 @@
     document.querySelector('.stats') && statsObserver.observe(document.querySelector('.stats'));
  
     // ── CONTACT FORM → ANTHROPIC API ─────────────────────────
+    // Remplacez VOTRE_CLE_API_ICI par votre vraie clé Anthropic
+    const ANTHROPIC_API_KEY = 'VOTRE_CLE_API_ICI';
+ 
     async function handleSubmit() {
       const name    = document.getElementById('fieldName').value.trim();
       const email   = document.getElementById('fieldEmail').value.trim();
@@ -1137,7 +1153,12 @@ Réponds directement avec le texte de confirmation, sans preamble ni balises.`;
       try {
         const res = await fetch('https://api.anthropic.com/v1/messages', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': ANTHROPIC_API_KEY,
+            'anthropic-version': '2023-06-01',
+            'anthropic-dangerous-direct-browser-access': 'true'
+          },
           body: JSON.stringify({
             model: 'claude-sonnet-4-20250514',
             max_tokens: 1000,
