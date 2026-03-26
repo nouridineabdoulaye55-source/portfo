@@ -744,88 +744,6 @@
       font-size: 0.9rem;
     }
 
-    /* BLOG */
-    .blog { background: var(--surface); padding: 6rem 4rem; }
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-      margin-bottom: 3rem;
-    }
-    .blog-card {
-      background: var(--card);
-      border: 1px solid var(--border2);
-      border-radius: 8px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    .blog-image {
-      height: 200px;
-      overflow: hidden;
-    }
-    .blog-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-    .blog-card:hover .blog-image img {
-      transform: scale(1.05);
-    }
-    .blog-content {
-      padding: 1.5rem;
-    }
-    .blog-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-    .blog-date {
-      color: var(--muted);
-      font-size: 0.8rem;
-      font-family: 'Space Mono', monospace;
-    }
-    .blog-category {
-      background: var(--accent);
-      color: var(--bg);
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
-    .blog-title {
-      color: var(--text);
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      line-height: 1.3;
-    }
-    .blog-excerpt {
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-    .blog-link {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-    }
-    .blog-link:hover {
-      color: var(--accent2);
-    }
-    .blog-cta {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
     /* TESTIMONIALS */
     .testimonials { background: var(--surface); padding: 6rem 4rem; }
     .testimonials-grid {
@@ -1178,7 +1096,6 @@
       <li><a href="#about" onclick="closeMenu()">À propos</a></li>
       <li><a href="#experience" onclick="closeMenu()">Expérience</a></li>
       <li><a href="#certifications" onclick="closeMenu()">Certifications</a></li>
-      <li><a href="#blog" onclick="closeMenu()">Blog</a></li>
       <li><a href="#services" onclick="closeMenu()">Services</a></li>
       <li><a href="#projects" onclick="closeMenu()">Projets</a></li>
       <li><a href="#testimonials" onclick="closeMenu()">Témoignages</a></li>
@@ -1201,7 +1118,6 @@
       <li><a href="#about">À propos</a></li>
       <li><a href="#experience">Expérience</a></li>
       <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#blog">Blog</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Projets</a></li>
       <li><a href="#testimonials">Témoignages</a></li>
@@ -1428,59 +1344,6 @@
     </div>
   </section>
 
-  <!-- BLOG -->
-  <section class="blog" id="blog">
-    <div class="section-tag">Blog</div>
-    <h2 class="section-title reveal">Articles & Tutoriels</h2>
-    <div class="blog-grid">
-      <article class="blog-card reveal">
-        <div class="blog-image">
-          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&q=80" alt="React Development" />
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span class="blog-date">15 Mars 2025</span>
-            <span class="blog-category">React</span>
-          </div>
-          <h3 class="blog-title">Optimisation des performances React : Guide complet</h3>
-          <p class="blog-excerpt">Découvrez les meilleures pratiques pour optimiser vos applications React : memoization, code splitting, lazy loading et bien plus.</p>
-          <a href="#" class="blog-link">Lire l'article →</a>
-        </div>
-      </article>
-      <article class="blog-card reveal">
-        <div class="blog-image">
-          <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&q=80" alt="Mobile Development" />
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span class="blog-date">8 Février 2025</span>
-            <span class="blog-category">Mobile</span>
-          </div>
-          <h3 class="blog-title">React Native vs Flutter : Quel framework choisir en 2025 ?</h3>
-          <p class="blog-excerpt">Comparaison détaillée des deux frameworks de développement mobile cross-platform : avantages, inconvénients et cas d'usage.</p>
-          <a href="#" class="blog-link">Lire l'article →</a>
-        </div>
-      </article>
-      <article class="blog-card reveal">
-        <div class="blog-image">
-          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80" alt="Web Development" />
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span class="blog-date">22 Janvier 2025</span>
-            <span class="blog-category">Web</span>
-          </div>
-          <h3 class="blog-title">API RESTful : Bonnes pratiques et sécurité</h3>
-          <p class="blog-excerpt">Guide complet pour créer des APIs REST sécurisées : authentification JWT, validation des données, rate limiting et gestion d'erreurs.</p>
-          <a href="#" class="blog-link">Lire l'article →</a>
-        </div>
-      </article>
-    </div>
-    <div class="blog-cta">
-      <a href="https://nouridineabdoulaye55-source.github.io/" class="btn-secondary" target="_blank">Voir tous les articles →</a>
-    </div>
-  </section>
-
   <!-- CERTIFICATIONS -->
   <section class="certifications" id="certifications">
     <div class="section-tag">Certifications</div>
@@ -1513,65 +1376,6 @@
         <div class="certification-org">Figma & Design Systems</div>
         <div class="certification-date">2023 - 2024</div>
         <p>Conception d'interfaces utilisateur modernes et expérience utilisateur optimisée.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOG -->
-  <section id="blog" class="blog">
-    <div class="container">
-      <h2 class="section-title">Latest Blog Posts</h2>
-      <p class="section-subtitle">Insights and thoughts on web development, design, and technology</p>
-      
-      <div class="blog-grid">
-        <article class="blog-card">
-          <div class="blog-image">
-            <img src="image/image_1_1774442275137.jpg" alt="Building Modern Web Applications">
-          </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span class="blog-date">Dec 15, 2024</span>
-              <span class="blog-category">Web Development</span>
-            </div>
-            <h3 class="blog-title">Building Modern Web Applications with Performance in Mind</h3>
-            <p class="blog-excerpt">Exploring the latest techniques for creating fast, responsive web applications that provide excellent user experiences across all devices.</p>
-            <a href="#" class="blog-link">Read More →</a>
-          </div>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-image">
-            <img src="image/image_1_1774514633521.jpg" alt="UI/UX Design Principles">
-          </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span class="blog-date">Nov 28, 2024</span>
-              <span class="blog-category">Design</span>
-            </div>
-            <h3 class="blog-title">Essential UI/UX Design Principles for 2024</h3>
-            <p class="blog-excerpt">A comprehensive guide to modern design principles that create intuitive and engaging user interfaces for web and mobile applications.</p>
-            <a href="#" class="blog-link">Read More →</a>
-          </div>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-image">
-            <img src="image/nb.jpg" alt="JavaScript Best Practices">
-          </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span class="blog-date">Nov 10, 2024</span>
-              <span class="blog-category">JavaScript</span>
-            </div>
-            <h3 class="blog-title">JavaScript Best Practices for Maintainable Code</h3>
-            <p class="blog-excerpt">Learn the coding patterns and practices that make JavaScript applications more maintainable, scalable, and easier to debug.</p>
-            <a href="#" class="blog-link">Read More →</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="blog-cta">
-        <a href="#" class="btn btn-primary">View All Posts</a>
       </div>
     </div>
   </section>
